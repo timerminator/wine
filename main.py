@@ -15,7 +15,6 @@ drinks = sorted(drinks, key=lambda x: x['Категория'])
 drinks_groupby_category = collections.defaultdict(list)
 for category, drinks_in_category in groupby(drinks, lambda x: x['Категория']):
     drinks_groupby_category[category] = list(drinks_in_category)
-pprint.pprint(drinks_groupby_category)
 
 env = Environment(
     loader=FileSystemLoader('.'),
